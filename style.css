@@ -13,61 +13,56 @@ body {
     align-items: center;
 
     background: #eaf6ff;
-    color: #111;
 }
 
-/* Main To-Do Box */
+/* Main container */
 
 .todo-container {
-    width: 585px;
-    max-width: 92%;
+    width: 550px;
+    background: white;
 
-    background: #ffffff;
-
-    padding: 55px 30px;
+    padding: 60px 28px;
 
     border-radius: 15px;
 
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 /* Heading */
 
-.todo-container h1 {
+h1 {
     text-align: center;
 
-    font-size: 48px;
-    font-weight: 700;
+    font-size: 46px;
 
     margin-bottom: 32px;
 
     color: #111;
 }
 
-/* Input Section */
+/* Input */
 
 .input-area {
     display: flex;
-    gap: 15px;
+    gap: 14px;
 
-    margin-bottom: 23px;
+    margin-bottom: 20px;
 }
 
 .input-area input {
     flex: 1;
 
-    height: 58px;
+    height: 56px;
 
     padding: 0 16px;
 
     font-size: 18px;
 
-    border: 1px solid #999;
-    border-radius: 4px;
+    border: 1px solid #888;
+
+    border-radius: 3px;
 
     outline: none;
-
-    background: white;
 }
 
 .input-area input:focus {
@@ -75,26 +70,26 @@ body {
 }
 
 .input-area button {
-    width: 72px;
+    width: 68px;
 
-    height: 58px;
+    height: 56px;
 
-    font-size: 18px;
-
-    background: #ffffff;
+    background: white;
 
     border: 1px solid #888;
 
-    border-radius: 4px;
+    border-radius: 3px;
+
+    font-size: 17px;
 
     cursor: pointer;
 }
 
 .input-area button:hover {
-    background: #eaf6ff;
+    background: #eef8ff;
 }
 
-/* Filter Buttons */
+/* Filter buttons */
 
 .filters {
     display: flex;
@@ -104,27 +99,26 @@ body {
 }
 
 .filters button {
-    height: 60px;
+    height: 55px;
 
     padding: 0 17px;
 
-    font-size: 18px;
-
-    background: #ffffff;
+    background: white;
 
     border: 1px solid #999;
 
-    border-radius: 4px;
+    border-radius: 3px;
+
+    font-size: 17px;
 
     cursor: pointer;
 }
 
 .filters button:hover {
-    background: #eaf6ff;
-    border-color: #5ba9e6;
+    background: #eef8ff;
 }
 
-/* Task List */
+/* Task list */
 
 #todoList {
     list-style: none;
@@ -132,42 +126,36 @@ body {
     display: flex;
     flex-direction: column;
 
-    gap: 15px;
+    gap: 14px;
 }
 
-/* Individual Task */
+/* Task row */
 
 #todoList li {
-    min-height: 93px;
+    min-height: 88px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    padding: 15px 15px;
+    padding: 14px;
 
-    background: #f1f1f1;
+    background: #f0f0f0;
 
-    border: none;
-
-    border-radius: 0;
-
-    font-size: 21px;
+    font-size: 20px;
 }
 
-/* Task Text */
+/* Task text */
 
 .task-text {
     flex: 1;
 
-    font-size: 21px;
-
     color: #111;
 
-    cursor: pointer;
+    font-size: 20px;
 }
 
-/* Completed Task */
+/* Completed task */
 
 #todoList li.completed .task-text {
     text-decoration: line-through;
@@ -175,61 +163,49 @@ body {
     color: #666;
 }
 
-/* Buttons on Task */
+/* Action buttons */
 
 .task-actions {
     display: flex;
 
-    gap: 6px;
+    gap: 5px;
 }
 
 .task-actions button {
-    width: 52px;
-    height: 63px;
+    width: 50px;
+    height: 60px;
 
     background: #f7f7f7;
 
     border: 1px solid #aaa;
 
-    border-radius: 4px;
+    border-radius: 3px;
 
     font-size: 25px;
 
     cursor: pointer;
 }
 
-.task-actions button:hover {
-    background: #ffffff;
-}
-
-/* Check Button */
+/* Check */
 
 .complete-btn {
     color: #111;
 }
 
-/* Edit Button */
+/* Edit */
 
 .edit-btn {
     color: #111;
 }
 
-/* Delete Button */
+/* Delete */
 
 .delete-btn {
-    color: #ff7da8;
+    color: #ff7fa8;
 }
 
-/* Empty Message */
-
-.empty-message {
-    text-align: center;
-
-    padding: 20px;
-
-    color: #777;
-
-    font-size: 16px;
+.task-actions button:hover {
+    background: white;
 }
 
 /* Mobile */
@@ -237,28 +213,24 @@ body {
 @media (max-width: 600px) {
 
     .todo-container {
-        padding: 35px 20px;
+        width: 92%;
+        padding: 40px 20px;
     }
 
-    .todo-container h1 {
+    h1 {
         font-size: 38px;
     }
 
-    .input-area {
-        gap: 8px;
-    }
-
-    .input-area button {
-        width: 65px;
+    .input-area input {
+        font-size: 16px;
     }
 
     .filters button {
         padding: 0 12px;
-        font-size: 16px;
+        font-size: 15px;
     }
 
     #todoList li {
-        min-height: 80px;
         font-size: 17px;
     }
 
@@ -267,8 +239,8 @@ body {
     }
 
     .task-actions button {
-        width: 42px;
-        height: 52px;
+        width: 40px;
+        height: 50px;
         font-size: 20px;
     }
 }
